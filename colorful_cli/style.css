@@ -1,0 +1,105 @@
+/* Main app styles */
+#app-grid {
+    layout: grid;
+    grid-size: 2;
+    grid-columns: 1fr 3fr;
+    grid-rows: 1fr;
+    height: 100%;
+}
+
+#main-container {
+    width: 100%;
+    height: 100%;
+    layout: vertical;
+}
+
+#main-panel {
+    height: 1fr;
+    overflow-y: auto;
+}
+
+#input-container {
+    height: auto;
+    dock: bottom;
+    background: #222;
+    padding: 1;
+    layout: horizontal;
+}
+
+#prompt-input {
+    width: 1fr;
+    margin-right: 1;
+}
+
+#send-button {
+    width: auto;
+    background: #3498db;
+}
+
+#sidebar {
+    width: 100%;
+    height: 100%;
+    background: #1e1e2e;
+    border-right: solid #333;
+    overflow-y: auto;
+}
+
+#sidebar.hidden {
+    display: none;
+}
+
+#log-container {
+    height: 10;
+    dock: bottom;
+    border-top: solid #333;
+}
+
+#status-log {
+    height: 100%;
+    background: #222;
+    color: #ddd;
+}
+
+/* Model completion panel styles */
+.output-container {
+    width: 100%;
+    height: 100%;
+    padding: 1;
+    overflow-y: auto;
+}
+
+.model-output {
+    margin: 1;
+}
+
+/* Sidebar styles */
+.provider-button {
+    width: 100%;
+    margin: 1 0;
+    background: #2c3e50;
+}
+
+.provider-button.active {
+    background: #3498db !important;
+    color: white !important;
+}
+
+#providers-container, #m3-container, #about-container {
+    padding: 1;
+    margin-bottom: 1;
+}
+
+/* Loading state */
+.loading {
+    border: solid yellow;
+}
+
+/* Button styles */
+Button:hover {
+    background: #3498db;
+}
+
+Button {
+    background: #2c3e50;
+    color: white;
+} 
