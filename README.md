@@ -59,26 +59,26 @@ OpenReasoning employs a layered architecture that promotes separation of concern
 - **Multimodal Reasoning**:
     -   Seamlessly combine and reason over text, images, audio (future), and structured data.
     -   Develop sophisticated cross-modal understanding and generation capabilities.
-- ** Multiple Model Providers**:
+- **Multiple Model Providers**:
     -   Easily switch between and utilize models from OpenAI, Anthropic, Mistral, Hugging Face, Cohere, local models via Ollama/LMStudio, and more.
     -   Abstracts provider-specific APIs for consistent interaction.
-- ** Advanced RAG (Retrieval-Augmented Generation)**:
+- **Advanced RAG (Retrieval-Augmented Generation)**:
     -   Construct sophisticated RAG systems with optimized prompting strategies (e.g., HyDE, Flare).
     -   Support for diverse embedding models (SentenceTransformers, OpenAI Ada, etc.).
     -   Flexible vector store integrations: FAISS, ChromaDB, Pinecone, Weaviate, and more.
     -   Advanced retrieval techniques like re-ranking and query transformation.
-- ** Agentic Architecture**:
+- **Agentic Architecture**:
     -   Design and deploy multi-step reasoning agents capable of dynamic tool use (function calling).
     -   Implement complex problem-solving strategies and autonomous task execution.
     -   Support for ReAct, Self-Ask, and other agentic patterns.
-- ** MLX Optimization for Apple Silicon**:
+- **MLX Optimization for Apple Silicon**:
     -   Leverage hardware-accelerated inference on Apple M-series chips for significant performance gains.
     -   Specific optimizations for M2/M3 series, including unified memory and efficient core utilization.
-- ** Comprehensive Monitoring & Logging**:
+- **Comprehensive Monitoring & Logging**:
     -   Integrated, structured logging with Loguru for easy debugging and analysis.
     -   Pydantic-based settings for robust configuration management.
     -   Track performance, quality, token usage, and cost metrics (provider-dependent).
-- ** Extensible & Modular Design**:
+- **Extensible & Modular Design**:
     -   Built with a highly modular architecture, allowing for easy customization and extension of core components (models, retrievers, agents, tools).
     -   Clear interfaces and base classes for developing new integrations.
 - **Command Line Interface (CLI)**:
