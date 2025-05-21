@@ -1,0 +1,17 @@
+<svg width="420" height="100" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Abstract Reasoning Symbol -->
+  <g transform="translate(0,10)">
+    <circle cx="40" cy="40" r="30" stroke="black" stroke-width="2"/>
+    <circle cx="40" cy="40" r="22" stroke="black" stroke-width="1" fill="none"/>
+    <circle cx="40" cy="40" r="14" stroke="black" stroke-width="1" fill="none"/>
+    <circle cx="40" cy="20" r="2.5" fill="black"/>
+    <circle cx="56" cy="40" r="2.5" fill="black"/>
+    <circle cx="40" cy="60" r="2.5" fill="black"/>
+    <circle cx="24" cy="40" r="2.5" fill="black"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="90" y="65" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="black" letter-spacing="1.8">
+    OpenReasoning
+  </text>
+</svg>
