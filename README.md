@@ -44,13 +44,44 @@ OpenReasoning is built upon the following principles:
 
 OpenReasoning employs a layered architecture that promotes separation of concerns and ease of development:
 
-*   **Data Ingestion & Processing Layer**: Tools for loading, preprocessing, and representing multimodal data.
-*   **Model Integration Layer**: Adapters for various LLM providers (OpenAI, Anthropic, Hugging Face, etc.) and embedding models.
-*   **Reasoning & Orchestration Core**: Implements the logic for RAG pipelines, agentic control flows, and multimodal fusion.
-*   **Tooling & Utilities**: Includes components for vector storage, caching, logging, monitoring, and optimized inference (e.g., MLX).
-*   **Application Interface Layer**: Provides APIs and CLIs for interacting with the framework and deploying applications.
+```
++-------------------------------------+
+|    Application Interface Layer      |
+| (APIs, CLI - Typer, Rich)           |
++-----------------|-------------------+
+                  |
++-----------------v-------------------+
+|  Reasoning & Orchestration Core     |
+| (RAG Pipelines, Agentic Flows,     |
+|  Multimodal Fusion, dspy-ai)        |
++-----------------|-------------------+
+                  |
+    +-------------+-------------+
+    |             |             |
++---v-----------+ +-------------v---+
+| Model         | | Tooling &       |
+| Integration   | | Utilities       |
+| Layer         | |                 |
+|---------------| |-----------------|
+| - OpenAI      | | - Vector Stores |
+| - Anthropic   | |   (FAISS,       |
+| - HuggingFace | |    ChromaDB)    |
+| - Mistral     | | - Caching       |
+| - Cohere      | | - Logging       |
+| - Ollama      | |   (Loguru)      |
+| - Local LLMs  | | - Monitoring    |
+| - Embeddings  | | - MLX Opt.      |
++---------------+ +-----------------+
+                  |
++-----------------v-------------------+
+| Data Ingestion & Processing Layer   |
+| (Text, Image, Audio (future),      |
+|  Structured Data Loaders &          |
+|  Preprocessors - Pillow, Pandas)    |
++-------------------------------------+
+```
 
-*(A more detailed architectural diagram will be added to the `docs/` section soon.)*
+*(A more detailed graphical architectural diagram will be added to the `docs/` section soon.)*
 
 ---
 
