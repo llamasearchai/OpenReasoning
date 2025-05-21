@@ -1,0 +1,23 @@
+version: '3'
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - MONGODB_URI=mongodb://mongo:27017
+      - DATABASE_NAME=openreasoning
+      - LOG_LEVEL=INFO
+      - ENVIRONMENT=production
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data: 

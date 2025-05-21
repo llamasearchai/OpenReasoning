@@ -1,0 +1,23 @@
+# This is a new file.
+# Contents will be copied from openreasoning2/.github/workflows/m3_tests.yml 
+
+name: M3 Mac Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-on-m3:
+    runs-on: self-hosted # This requires a self-hosted runner on an M3 Mac
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python environment
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install pytest pytest-cov
+          python3 -m pip install -e .
+      - name: Run M3-specific tests
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python3 -m pytest tests/unit/test_m3_optimizer.py -v 
